@@ -37,7 +37,7 @@ def my_ip() -> str:
         client_ip_reverse_dns: str = split(" IN PTR ",
                                            str(resolver.resolve_address(str(client_info[0])).rrset))[1].rstrip(".")
     else:
-        client_ip_reverse_dns = None
+        client_ip_reverse_dns: str = ""
 
     # Format Results To HTML
     if client_info[0]:
